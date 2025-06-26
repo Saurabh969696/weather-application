@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Madimi One", sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: url(img/bg.webp) no-repeat center center/cover fixed;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    color: #000;
+    margin: 0px auto;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search_bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search_bar input{
+    border: 0;
+    outline: 0;
+    background: black;
+    color: white;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 20px;
+}
+
+.search_bar input::placeholder{
+    color: white;
+}
+
+.search_bar button{
+    border: 0;
+    outline: 0;
+    background: black;
+    border-radius: 50%;
+    width: 60px;
+    font-size: 19px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.weather-icon{
+    width: 170px;
+    margin-top: 10px;
+}
+
+.weather h1{
+    font-size: 100px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.weather h2{
+    font-size: 60px;
+    margin-top: 0px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+.col img{
+    width: 50px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+
+.humidity, .wind, .visibility{
+    font-size: 28px;
+}
+
+.weather{
+    display: none;
+}
+
+.error{
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: none;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
+
+footer a{
+    text-decoration: none;
+    color: #000000c7;
+    transition: all 0.2s ease-in-out;
+}
+
+footer a:hover{
+    color: #000;
+}
+
+/* Making it responsive for mobile screens */
+
+@media only screen and (max-width: 600px) {
+
+    body{
+        background: url(img/bgmob.webp) no-repeat center center/cover fixed;
+    }
+
+    .container{
+        width: 100%;
+        max-width: 370px;
+        margin: 20px auto;
+        padding: 10px 5px;
+    }
+    
+    .search_bar{
+        width: 100%;
+    }
+    
+    .search_bar input{
+        width: 85%;
+        padding: 3px 10px;
+        height: 50px;
+        margin-right: 2px;
+        font-size: 16px;
+    }
+    
+    .search_bar button{
+        width: 14%;
+        font-size: 13px;
+        height: 50px;
+    }
+
+    .search_bar button img{
+        height: 29px;
+    }
+
+    .col img{
+        width: 23px;
+        margin-right: 2px;
+    }
+
+    .humidity, .wind, .visibility{
+        font-size: 18px;
+    }
+
+    .col{
+        margin: 0 2px;
+        font-size: 9px;
+    }
+
+    footer{
+        margin-left: 0;
+        position: relative;
+        bottom: 0;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .weather h1{
+        font-size: 80px;
+    }
+
+    .weather h2{
+        font-size: 70px;
+    }
+}
